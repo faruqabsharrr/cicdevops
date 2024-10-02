@@ -1,0 +1,9 @@
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "nodejs-app:1"
+        LoadBalancerInfo:
+          ContainerName: "nodejs-app"
+          ContainerPort: 3000

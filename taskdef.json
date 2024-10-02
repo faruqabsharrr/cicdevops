@@ -1,0 +1,19 @@
+{
+    "family": "nodejs-app",
+    "containerDefinitions": [
+      {
+        "name": "nodejs-app",
+        "image": "<AWS_ACCOUNT_ID>.dkr.ecr.us-east-1.amazonaws.com/nodejs-ecs-app:latest",
+        "memory": 512,
+        "cpu": 256,
+        "essential": true,
+        "portMappings": [
+          {
+            "containerPort": 3000,
+            "hostPort": 3000
+          }
+        ]
+      }
+    ]
+  }
+  
